@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binaSsou Group</title>
+    <link rel="icon" href="data:,">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #0a1628; /* fallback */
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        /* Dark overlay for readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ─── Header ─── */
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+        }
+
+        .logo .brand {
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo .group {
+            color: #cbd5e1;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #94a3b8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ─── Section Title ─── */
+        .section-title {
+            font-size: 13px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            padding-left: 4px;
+        }
+
+        /* ─── Channel Card ─── */
+        .channel {
+            display: flex;
+            align-items: center;
+            background: rgba(10, 22, 40, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .channel:hover {
+            background: rgba(74, 222, 128, 0.15);
+            border-color: rgba(74, 222, 128, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 222, 128, 0.15);
+        }
+
+        .channel:active {
+            transform: translateY(0);
+        }
+
+        .channel-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 14px;
+            flex-shrink: 0;
+        }
+
+        .channel-icon.blue   { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+        .channel-icon.purple { background: linear-gradient(135deg, #a78bfa, #8b5cf6); }
+        .channel-icon.orange { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+        .channel-icon.pink   { background: linear-gradient(135deg, #f472b6, #ec4899); }
+
+        .channel-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .channel-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .channel-desc {
+            font-size: 12px;
+            color: #94a3b8;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .channel-arrow {
+            font-size: 18px;
+            color: #4ade80;
+            margin-left: 8px;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .channel:hover .channel-arrow {
+            transform: translateX(4px);
+        }
+
+        /* ─── Footer ─── */
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 11px;
+            color: #cbd5e1;
+        }
+
+        .footer a {
+            color: #4ade80;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ─── Header ─── -->
+        <div class="header">
+            <div class="logo">
+                <span class="brand">binaSsou</span>
+                <span class="group">GROUP</span>
+            </div>
+            <div class="tagline">Digital Currency · Blockchain</div>
+        </div>
+
+        <!-- ─── Channels Section ─── -->
+        <div class="section-title">📢 Our Channels</div>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- ✏️ عدّل الروابط أدناه حسب قنواتك -->
+        <!-- ═══════════════════════════════════════════ -->
+
+        <a href="https://t.me/binaSsou" class="channel" target="_blank">
+            <div class="channel-icon">📢</div>
+            <div class="channel-info">
+                <div class="channel-name">Main Channel</div>
+                <div class="channel-desc">Latest news and updates</div>
+            </div>
+            <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="https://t.me/binasou1" class="channel" target="_blank">
+            <div class="channel-icon blue">💬</div>
+            <div class="channel-info">
+                <div class="channel-name">Discussion Group</div>
+                <div class="channel-desc">Chat with the community</div>
+            </div>
+            <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="https://t.me/+d0cyLgBeso1mYjM0" class="channel" target="_blank">
+            <div class="channel-icon purple">🚀</div>
+            <div class="channel-info">
+                <div class="channel-name">Binas👑🎀Chérie💄</div>
+                <div class="channel-desc">girls only</div>
+            </div>
+            <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="https://t.me/hPwlsxTfOYwyYTJk" class="channel" target="_blank">
+            <div class="channel-icon orange">💰</div>
+            <div class="channel-info">
+                <div class="channel-name">꧁Hakuna matata꧂</div>
+                <div class="channel-desc"></div>
+            </div>
+            <div class="channel-arrow">→</div>
+        </a>
+
+        <a href="https://t.me/+WbewCi8EGkU3ZDg0" class="channel" target="_blank">
+            <div class="channel-icon pink">🎓</div>
+            <div class="channel-info">
+                <div class="channel-name">binaSsou chat</div>
+                <div class="channel-desc"></div>
+            </div>
+            <div class="channel-arrow">→</div>
+        </a>
+
+        <!-- ─── Footer ─── -->
+        <div class="divider"></div>
+
+        <div class="footer">
+            © 2026 <strong style="color:#4ade80;">binaSsou Group</strong><br>
+            All rights reserved
+        </div>
+
+    </div>
+</body>
+</html>
